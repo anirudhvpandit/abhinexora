@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111a2b">
+    <meta name="description" content="AbhiNexora process intelligence workspace">
+    <title>AbhiNexora — Process intelligence</title>
+    <link rel="icon" href="/static/mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#" data-page="dashboard" aria-label="AbhiNexora home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 36 36"><path d="M7 25.5 18 6l11 19.5h-7L18 17l-4 8.5H7Z"/><circle cx="27.5" cy="27.5" r="3.5"/></svg>
+          </span>
+          <span class="brand-copy"><strong>AbhiNexora</strong><small>PROCESS INTELLIGENCE</small></span>
+        </a>
+
+        <div class="workspace-switcher">
+          <span class="workspace-avatar">AN</span>
+          <span class="workspace-label"><small>WORKSPACE</small><strong>Demonstration</strong></span>
+          <span class="chevron">⌄</span>
+        </div>
+
+        <div class="nav-caption">WORKSPACE</div>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-page="dashboard"><span class="nav-icon">◫</span>Command center</button>
+          <button class="nav-item" data-page="discovery"><span class="nav-icon">⌘</span>Process discovery</button>
+          <button class="nav-item" data-page="data"><span class="nav-icon">▤</span>Event log</button>
+          <button class="nav-item" data-page="opportunities"><span class="nav-icon">✳</span>Opportunities</button>
+          <button class="nav-item" data-page="roadmap"><span class="nav-icon">◷</span>Transformation</button>
+          <button class="nav-item" data-page="reports"><span class="nav-icon">▧</span>Reports</button>
+        </nav>
+
+        <div class="nav-caption nav-caption-lower">GOVERNANCE</div>
+        <div class="nav-static"><span class="nav-icon">◉</span>Data governance <span class="soon">LOCAL</span></div>
+        <div class="sidebar-bottom">
+          <div class="environment-note"><span class="status-dot"></span><span><strong>Local workspace</strong><small>Data stays on this device</small></span></div>
+          <div class="profile-button" aria-label="Current local user">
+            <span class="profile-avatar">AD</span>
+            <span class="profile-copy"><strong>Analyst Demo</strong><small>Process analyst</small></span>
+            <span class="profile-menu">···</span>
+          </div>
+        </div>
+      </aside>
+
+      <div class="main-column">
+        <header class="topbar">
+          <button class="mobile-menu icon-button" id="menuToggle" aria-label="Open navigation">☰</button>
+          <div class="breadcrumbs"><span>Workspace</span><span class="crumb-slash">/</span><strong id="breadcrumbCurrent">Command center</strong></div>
+          <div class="topbar-actions">
+            <label class="global-search"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="Search cases, activities…" aria-label="Search cases and activities"><kbd>⌘ K</kbd></label>
+            <span class="topbar-divider"></span>
+            <button class="date-control" id="dateControl" data-range="90d"><span class="calendar-icon">▦</span><span>Last 90 days</span><span class="chevron">⌄</span></button>
+            <button class="icon-button notification-button" aria-label="Notifications"><span>♧</span><i></i></button>
+            <span class="topbar-avatar">AD</span>
+          </div>
+        </header>
+        <main class="content" id="content" tabindex="-1">
+          <div class="page-loading"><span class="loader"></span>Loading process intelligence…</div>
+        </main>
+        <footer class="app-footer"><span>AbhiNexora <span class="footer-separator">·</span> Local demonstration workspace</span><span id="footerDataLabel">Synthetic data</span></footer>
+      </div>
+      <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+      <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+    </div>
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>
